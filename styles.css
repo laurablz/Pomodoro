@@ -1,0 +1,51 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #c56f6f;
+  overflow: hidden;
+}
+
+#barra-superior {
+  display: flex;
+  justify-content: flex-end;
+  padding: 5px;
+  background: none; /* mismo color que tu ventana, no se ve barra */
+  -webkit-app-region: drag;
+}
+
+#barra-superior button {
+    -webkit-app-region: no-drag;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  margin-left: 5px;
+  padding: 0;
+}
+
+#barra-superior button img {
+  width: 20px;
+  height: 20px;
+}
+
+
+
+/* Pantallas */
+.pantalla {
+  display: none;
+}
+
+.pantalla:not(.oculto) {
+  display: block;
+}
+
+#display-timer {
+  font-size: 48px;
+  margin: 20px 0;
+}
+
+/* Tareas completadas */
+.done span {
+  text-decoration: line-through;
+  color: gray;
+}

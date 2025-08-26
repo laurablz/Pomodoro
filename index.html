@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Pomodoro App</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+    <!-- Barra superior personalizada -->
+  <div id="barra-superior">
+    <button id="minimizar">
+        <img src="src/minimizar.png" alt="minimizar"/>
+    </button>
+    <button id="cerrar">
+        <img src="src/cerrar.png" alt="cerrar"/>
+    </button>
+  </div>
+
+  <!-- Pantalla 1: Inicio -->
+  <section id="pantalla-inicio" class="pantalla">
+    <h1>Selecciona el tiempo</h1>
+    <label for="tiempo">Tiempo (min):</label>
+    <select id="tiempo">
+      <option value="5">5</option>
+      <option value="10">10</option>
+      <option value="15">15</option>
+      <option value="25" selected>25</option>
+      <option value="30">30</option>
+      <option value="45">45</option>
+      <option value="60">60</option>
+    </select>
+    <br><br>
+    <button id="btnStart">Start</button>
+  </section>
+
+  <!-- Pantalla 2: Timer -->
+  <section id="pantalla-timer" class="pantalla oculto">
+    <h1>Temporizador</h1>
+    <div id="display-timer">00:00</div>
+    <div>
+      <button id="btnPauseResume">Pausar</button>
+      <button id="btnReset">Reiniciar</button>
+    </div>
+    <br>
+    <button id="goTareas">Ir a tareas</button>
+    <button id="goInicio">Volver al inicio</button>
+  </section>
+
+  <!-- Pantalla 3: Tareas -->
+  <section id="pantalla-tareas" class="pantalla oculto">
+    <h1>Tareas</h1>
+    <form id="formTarea">
+      <input type="text" id="inputTarea" placeholder="Escribe una tarea..." />
+      <button type="submit">Añadir</button>
+    </form>
+    <ul id="listaTareas"></ul>
+    <br>
+    <button id="goTimer">Volver al temporizador</button>
+  </section>
+
+  <script src="./renderer.js"></script>
+</body>
+</html>
