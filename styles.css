@@ -11,6 +11,41 @@ html, body {
   border-radius: 20px;   /* 🔴 bordes redondeados de la ventana */
 }
 
+/* --- Select retro --- */
+label {
+  font-size: 12px;
+}
+
+select {
+  background-color: #ffffff;
+  border: 2px solid #000;
+  border-radius: 4px;
+  font-size: 12px;
+  padding: 6px 10px;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  font-family: 'Press Start 2P', monospace;
+  color: #000;
+  text-transform: uppercase;
+  position: relative;
+}
+
+/* Flecha custom */
+select {
+  background-image: url('src/flecha.png'); /* usa un icono pixelado */
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  background-size: 12px 12px;
+  padding-right: 28px;
+}
+
+select:focus {
+  outline: none;
+  border-color: #ff002b; /* borde rosa retro al enfocar */
+}
+
 /* Barra superior */
 #barra-superior {
   display: flex;
