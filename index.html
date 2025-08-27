@@ -9,6 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
 <body>
+  <h1 id="texto-titulo">Pomodoro!</h1>
     <!-- Barra superior personalizada -->
   <div id="barra-superior">
     <button id="minimizar">
@@ -17,12 +18,12 @@
     <button id="cerrar">
         <img src="src/cerrar.png" alt="cerrar"/>
     </button>
+    
   </div>
 
   <!-- Pantalla 1: Inicio -->
   <section id="pantalla-inicio" class="pantalla">
-    <h1>Selecciona el tiempo</h1>
-    <label for="tiempo">Tiempo (min):</label>
+    <label id="label-tiempo" for="tiempo">Minutos:</label>
     <select id="tiempo">
       <option value="5">5</option>
       <option value="10">10</option>
@@ -38,7 +39,7 @@
 
   <!-- Pantalla 2: Timer -->
   <section id="pantalla-timer" class="pantalla oculto">
-    <h1>Temporizador</h1>
+    <h1 id="titulo-timer">Temporizador</h1>
     <div id="display-timer">00:00</div>
     <div>
       <button id="btnPauseResume">Pausar</button>
@@ -51,7 +52,7 @@
 
   <!-- Pantalla 3: Tareas -->
   <section id="pantalla-tareas" class="pantalla oculto">
-    <h1>Tareas</h1>
+    <h1 id="titulo-tareas">Tareas</h1>
     <form id="formTarea">
       <input type="text" id="inputTarea" placeholder="Escribe una tarea..." />
       <button type="submit">Añadir</button>

@@ -3,7 +3,7 @@ html, body {
   padding: 0;
   width: 100%;
   height: 100%;
-  font-family: Arial, sans-serif;
+  font-family: 'Press Start 2P', monospace;
   overflow: hidden;
 
   /* 🔴 body transparente (ya tienes transparent: true en Electron) */
@@ -30,6 +30,8 @@ select {
   color: #000;
   text-transform: uppercase;
   position: relative;
+  top: 250px;   /* distancia desde arriba */
+  left: 200px;   /* distancia desde la izquierda */
 }
 
 /* Flecha custom */
@@ -112,4 +114,23 @@ select:focus {
 .done span {
   text-decoration: line-through;
   color: gray;
+}
+
+
+/* TEXTOS */
+
+#texto-titulo {
+  font-size: 18px;
+  color: rgb(0, 0, 0);
+  position: absolute;
+  top: 10px;
+  left: 25px;
+}
+
+#label-tiempo {
+  font-size: 15px;
+  color: rgb(0, 0, 0);
+  position: absolute;
+  top: 260px;
+  left: 80px;
 }
