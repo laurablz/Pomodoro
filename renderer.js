@@ -161,3 +161,14 @@ document.getElementById("minimizar").addEventListener("click", () => {
 mostrarPantalla("pantalla-inicio");
 renderTimer();
 renderTareas();
+
+// Tomate
+const imagen = document.getElementById('imagen-toggle');
+  const rutas = ["src/TomateInicio1.png", "src/TomateInicio2.png"]; 
+  let indice = 0;
+
+  setInterval(() => {
+    indice = (indice + 1) % rutas.length;
+    imagen.src = rutas[indice];
+  }, 1000);
+;
