@@ -1,21 +1,32 @@
 html, body {
   margin: 0;
   padding: 0;
+  width: 100%;
+  height: 100%;
   font-family: Arial, sans-serif;
-  background-color: #c56f6f;
   overflow: hidden;
+
+  /* 🔴 body transparente (ya tienes transparent: true en Electron) */
+  background: transparent;
+  border-radius: 20px;   /* 🔴 bordes redondeados de la ventana */
 }
 
+/* Barra superior */
 #barra-superior {
   display: flex;
   justify-content: flex-end;
   padding: 5px;
-  background: none; /* mismo color que tu ventana, no se ve barra */
+  background: none;
   -webkit-app-region: drag;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10; /* encima de las pantallas */
 }
 
 #barra-superior button {
-    -webkit-app-region: no-drag;
+  -webkit-app-region: no-drag;
   border: none;
   background: transparent;
   cursor: pointer;
@@ -28,15 +39,33 @@ html, body {
   height: 20px;
 }
 
-
-
 /* Pantallas */
 .pantalla {
   display: none;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 1px;  /* 🔴 cada pantalla respeta las esquinas */
+  overflow: hidden;
 }
 
 .pantalla:not(.oculto) {
   display: block;
+}
+
+/* Fondos específicos */
+#pantalla-inicio {
+  background-image: url('src/Inicio.png');
+}
+
+#pantalla-timer {
+  background-image: url('src/cerrar.png');
+}
+
+#pantalla-tareas {
+  background-image: url('src/cerrar.png');
 }
 
 #display-timer {

@@ -5,18 +5,19 @@ let win;
 
 function createWindow() {
     win = new BrowserWindow({
-        width: 400,
-        height: 500,
+        width: 350,
+        height: 450,
         frame: false,
-        transparent: false,
+        transparent: true,
         resizable: false,
+        maximizable: false,
         webPreferences: {
             preload: path.join(__dirname, "preload.js"),
             contextIsolation: true,
             nodeIntegration: false
         }
     });
-
+    
     win.loadFile("index.html");
 }
 
