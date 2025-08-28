@@ -97,11 +97,11 @@ select:focus {
 
 /* Fondos específicos */
 #pantalla-inicio {
-  background-image: url('src/Inicio.png');
+  background-image: url('src/Inicio3.png');
 }
 
 #pantalla-timer {
-  background-image: url('src/cerrar.png');
+  background-image: url('src/Timer.png');
 }
 
 #pantalla-tareas {
@@ -190,7 +190,7 @@ select:focus {
   cursor: pointer;           /* mano al pasar */
   position: absolute;        /* 🔴 así lo puedes mover libremente */
   top: 320px;                /* cambia esto a tu gusto */
-  left: 172px;                 /* centrado horizontal */
+  left: 174px;                 /* centrado horizontal */
   transform: translateX(-50%);
 }
 
